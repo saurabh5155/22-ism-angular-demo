@@ -7,9 +7,17 @@ import { Component} from '@angular/core';
 })
 export class SignupComponent {
 
-  constructor() { }
+  firstName:String =""
+  lastName:String = ""
+  gender = "" //Auto string
+  email:String =""
+  password:String =""
 
-  ngOnInit(): void {
+  printData(){
+    console.log("Firstname ->"+this.firstName);
+    console.log("Lastname ->"+this.lastName);
+    console.log("Gender ->"+this.gender);
+    console.log("Email ->"+this.email);
+    console.log("Password ->"+this.password);
   }
-
 }

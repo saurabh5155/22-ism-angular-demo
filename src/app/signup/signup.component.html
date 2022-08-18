@@ -1,14 +1,14 @@
 <h1>Signup</h1>
 
-FirstName:<input type="text"/> <br><br>
-LastName:<input type="text"/> <br><br>
+FirstName:<input type="text" [(ngModel)]="firstName"/> <br><br>
+LastName:<input type="text" [(ngModel)]="lastName"/> <br><br>
 Gender:<br>
 Male:
-<input type="radio" name="gender" value="male"/> <br>
+<input type="radio" name="gender" value="male" [(ngModel)]="gender"/> <br>
 Female:
-<input type="radio" value="female" name="gender"/> <br> <br>
-Email:<input type="text"/> <br> <br>
-Password:<input type="text"/> <br> <br>
+<input type="radio" value="female" name="gender" [(ngModel)]="gender"/> <br> <br>
+Email:<input type="text" [(ngModel)]="email"/> <br> <br>
+Password:<input type="text" [(ngModel)]="password"/> <br> <br>
 
-<button type="submit">Submit</button>
+<button type="submit" (click)="printData()">Submit</button>
 
