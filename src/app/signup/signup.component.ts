@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -14,7 +15,7 @@ export class SignupComponent {
   email:String =""
   password:String =""
 
-  constructor(private toastr:ToastrService){
+  constructor(private toastr:ToastrService , private router:Router){
 
   }
 
@@ -25,5 +26,6 @@ export class SignupComponent {
     console.log("Email ->"+this.email);
     console.log("Password ->"+this.password);
     this.toastr.success("Signup Done","",{timeOut:3000});
+    this.router.navigateByUrl("/login")
   }
 }
