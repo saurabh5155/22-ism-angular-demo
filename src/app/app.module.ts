@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 // import HttpClientModule
 import { HttpClientModule } from "@angular/common/http";
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from "@angular/common/http";
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   // declreation for external libreary
   imports: [
