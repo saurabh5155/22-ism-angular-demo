@@ -11,9 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 // import HttpClientModule
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { AddRoleComponent } from './add-role/add-role.component';
+import { TokenGenrationInterceptor } from './token-genration.interceptor';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { AddRoleComponent } from './add-role/add-role.component';
     HttpClientModule
   ],
   // provide interseptor class 
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,useClass:TokenGenrationInterceptor,multi:true
+  }],
   // boot at first Time
   bootstrap: [AppComponent]
 })
