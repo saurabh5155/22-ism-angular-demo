@@ -1,0 +1,24 @@
+<!-- {{roles}} -->
+
+<p>Role List</p>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of roles">
+        <th scope="row">{{r.roleId}}</th>
+        <td>{{r.roleName}}</td>
+        <td><button class="btn" (click)="delete(r.roleId)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
