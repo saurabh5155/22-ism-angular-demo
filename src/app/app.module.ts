@@ -10,22 +10,30 @@ import { AppRoutingModule } from './app-routing.module';
 // import toster
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+// import HttpClientModule
+import { HttpClientModule } from "@angular/common/http";
+
 
 @NgModule({
+  // declreation for our compenent
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
     HeaderComponent
   ],
+  // declreation for external libreary
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule, 
     ToastrModule.forRoot(),
+    HttpClientModule
   ],
+  // provide interseptor class 
   providers: [],
+  // boot at first Time
   bootstrap: [AppComponent]
 })
 export class AppModule { }
