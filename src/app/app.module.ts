@@ -15,6 +15,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { AddRoleComponent } from './add-role/add-role.component';
 import { TokenGenrationInterceptor } from './token-genration.interceptor';
+import { ListRoleComponent } from './list-role/list-role.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TokenGenrationInterceptor } from './token-genration.interceptor';
     LoginComponent,
     HeaderComponent,
     HomeComponent,
-    AddRoleComponent
+    AddRoleComponent,
+    ListRoleComponent
   ],
   // declreation for external libreary
   imports: [

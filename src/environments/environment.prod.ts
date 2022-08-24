@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+   // set url for Production in environment.prod.ts
+   URL:"http://myApp.com/"
 };
