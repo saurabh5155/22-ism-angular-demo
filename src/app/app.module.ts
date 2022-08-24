@@ -13,6 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 // import HttpClientModule
 import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
+import { AddRoleComponent } from './add-role/add-role.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     SignupComponent,
     LoginComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AddRoleComponent
   ],
   // declreation for external libreary
   imports: [

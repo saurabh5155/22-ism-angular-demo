@@ -38,7 +38,7 @@ export class SignupComponent {
 
     this.sessionService.signupApi(user).subscribe(res => {
       if (res) {
-        this.toastr.success("Signup Done", "", { timeOut: 3000 });
+        this.toastr.success("Signup Done", "", { timeOut: 1500 });
         this.router.navigateByUrl("/login")
       }
     },err=>{

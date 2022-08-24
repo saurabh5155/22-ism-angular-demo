@@ -26,6 +26,11 @@ export class LoginComponent  {
     }
 
     this.sessionService.loginApi(loginCredentials).subscribe(res=>{
+
+      console.log(res.users.authenticationToken);
+
+      localStorage.setItem("authToken",res.users.authenticationToken);
+
       this.toster.success("Login Successfull","",{ timeOut:1500 })
       this.router.navigateByUrl("/home")
     },err=>{
