@@ -18,6 +18,7 @@ import { TokenGenrationInterceptor } from './token-genration.interceptor';
 import { ListRoleComponent } from './list-role/list-role.component';
 
 
+
 @NgModule({
   // declreation for our compenent
   declarations: [
@@ -27,7 +28,7 @@ import { ListRoleComponent } from './list-role/list-role.component';
     HeaderComponent,
     HomeComponent,
     AddRoleComponent,
-    ListRoleComponent
+    ListRoleComponent,
   ],
   // declreation for external libreary
   imports: [
