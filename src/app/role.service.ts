@@ -18,10 +18,10 @@ export class RoleService {
   }
 
   listRoleApi(): Observable<any> {
-    let authToken = localStorage.getItem("authToken") as string 
-    let headers1 = new HttpHeaders({'authToken':authToken});
+    // let authToken = localStorage.getItem("authToken") as string 
+    // let headers1 = new HttpHeaders({'authToken':authToken});
  
-    return this.http.get(environment.URL + "private/role",{headers:headers1});
+    return this.http.get(environment.URL + "private/role");
   }
 
   deleteRoleApi(roleId: any): Observable<any> {
@@ -29,5 +29,8 @@ export class RoleService {
   }
   getRoleByIdApi(roleId: any): Observable<any> {
     return this.http.get(environment.URL + "private/role/" + roleId)
+  }
+  updateRoleById(roles:any):Observable<any>{
+    return this.http.put(environment.URL + "private/role", roles);
   }
 }

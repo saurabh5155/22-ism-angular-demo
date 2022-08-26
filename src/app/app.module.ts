@@ -19,7 +19,8 @@ import { ListRoleComponent } from './list-role/list-role.component';
 // primeng
 import {DialogModule} from 'primeng/dialog';
 import { ViewRoleComponent } from './view-role/view-role.component';
-import { UserComponentComponent } from './user-component/user-component.component';  
+import { UserComponentComponent } from './user-component/user-component.component';
+import { UpdateRoleComponent } from './update-role/update-role.component';  
 
 
 
@@ -35,6 +36,7 @@ import { UserComponentComponent } from './user-component/user-component.componen
     ListRoleComponent,
     ViewRoleComponent,
     UserComponentComponent,
+    UpdateRoleComponent,
   ],
   // declreation for external libreary
   imports: [
