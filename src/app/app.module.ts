@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { AddRoleComponent } from './add-role/add-role.component';
 import { TokenGenrationInterceptor } from './token-genration.interceptor';
 import { ListRoleComponent } from './list-role/list-role.component';
+// primeng
+import {DialogModule} from 'primeng/dialog';  
 
 
 
@@ -37,12 +39,13 @@ import { ListRoleComponent } from './list-role/list-role.component';
     FormsModule,
     BrowserAnimationsModule, 
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    DialogModule,
   ],
   // provide interseptor class 
-  providers: [{
-    provide:HTTP_INTERCEPTORS,useClass:TokenGenrationInterceptor,multi:true
-  }],
+  providers: [
+     {provide:HTTP_INTERCEPTORS,useClass:TokenGenrationInterceptor,multi:true}
+  ],
   // boot at first Time
   bootstrap: [AppComponent]
 })

@@ -26,6 +26,7 @@ export class AddRoleComponent implements OnInit {
       this.toster.success("Role Added","",{timeOut:1200})
       this.router.navigateByUrl("/listRole")
     },err=>{
+      console.log(err);
       this.toster.error("something went wrong","",{timeOut:1200})
       this.router.navigateByUrl("/addRole")
     })

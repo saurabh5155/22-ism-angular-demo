@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { RoleService } from '../role.service';
-
+import { PrimeNGConfig } from 'primeng/api';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-list-role',
   templateUrl: './list-role.component.html',
@@ -11,6 +12,9 @@ import { RoleService } from '../role.service';
 export class ListRoleComponent implements OnInit {
 
   roles: Array<any> = [];
+  roleName: string = "";
+  display = false
+
   constructor(private roleService: RoleService, private toastr: ToastrService) { }
 
 
@@ -44,9 +48,21 @@ export class ListRoleComponent implements OnInit {
 
       // not use because it's go to backend
       // this.listUser();
-    },err=>{
+    }, err => {
       this.toastr.error("Role Not Deleted", "", { timeOut: 1500 })
       this.roles
+    })
+  }
+  
+  getRoleByIdWithModel(roleId: any){
+    console.log(roleId);
+    
+    this.roleService.getRoleByIdApi(roleId).subscribe(res => {
+      this.roleName = res.roleName
+      this.display = true
+      
+    }, err => {
+      this.toastr.error("SWR")
     })
   }
 }
