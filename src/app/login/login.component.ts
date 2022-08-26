@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthTokenService } from '../auth-token.service';
 import { SessionService } from '../session.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent  {
   email:string=""
   password:string=""
 
-  constructor(private sessionService:SessionService,private router:Router,private toster:ToastrService) { }
+  constructor(private sessionService:SessionService,private router:Router,private toster:ToastrService,private authTokenService:AuthTokenService) { }
 
   login(){
 
@@ -29,8 +30,12 @@ export class LoginComponent  {
 
       console.log(res.users.authenticationToken);
 
+      // add authToken in LocalStorage
       localStorage.setItem("authToken",res.users.authenticationToken);
 
+      // add Auth token In service
+      this.authTokenService.authToken = res.users.authenticationToken
+      
       this.toster.success("Login Successfull","",{ timeOut:1500 })
       this.router.navigateByUrl("/home")
     },err=>{
