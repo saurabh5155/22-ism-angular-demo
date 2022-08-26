@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { ListRoleComponent } from './list-role/list-role.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { ViewRoleComponent } from './view-role/view-role.component';
 
 
 
@@ -14,7 +15,7 @@ const routes: Routes = [
   {component:HomeComponent,path:"home"},
   {component:AddRoleComponent,path:"addRole"},
   {component:ListRoleComponent,path:"listRole"},
-
+  {component:ViewRoleComponent,path:"viewRole/:roleId"}
 ];
 
 @NgModule({
