@@ -18,7 +18,8 @@ import { TokenGenrationInterceptor } from './token-genration.interceptor';
 import { ListRoleComponent } from './list-role/list-role.component';
 // primeng
 import {DialogModule} from 'primeng/dialog';
-import { ViewRoleComponent } from './view-role/view-role.component';  
+import { ViewRoleComponent } from './view-role/view-role.component';
+import { UserComponentComponent } from './user-component/user-component.component';  
 
 
 
@@ -33,6 +34,7 @@ import { ViewRoleComponent } from './view-role/view-role.component';
     AddRoleComponent,
     ListRoleComponent,
     ViewRoleComponent,
+    UserComponentComponent,
   ],
   // declreation for external libreary
   imports: [

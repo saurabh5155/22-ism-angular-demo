@@ -24,11 +24,11 @@ export class AddRoleComponent implements OnInit {
 
     this.roleService.addRoleApi(roles).subscribe(res=>{
       this.toster.success("Role Added","",{timeOut:1200})
-      this.router.navigateByUrl("/listRole")
+      this.router.navigateByUrl("/user/listRole")
     },err=>{
       console.log(err);
       this.toster.error("something went wrong","",{timeOut:1200})
-      this.router.navigateByUrl("/addRole")
+      this.router.navigateByUrl("/user/addRole")
     })
   }
 }

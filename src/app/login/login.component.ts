@@ -37,7 +37,7 @@ export class LoginComponent  {
       this.authTokenService.authToken = res.users.authenticationToken
       
       this.toster.success("Login Successfull","",{ timeOut:1500 })
-      this.router.navigateByUrl("/home")
+      this.router.navigateByUrl("/user/home")
     },err=>{
       this.toster.error("Invalid loginCredentials","",{ timeOut:1500 })
       this.router.navigateByUrl("/login")     
