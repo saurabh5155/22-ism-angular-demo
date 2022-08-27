@@ -7,6 +7,7 @@ import {
   HttpHeaders
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class TokenGenrationInterceptor implements HttpInterceptor {
@@ -14,6 +15,9 @@ export class TokenGenrationInterceptor implements HttpInterceptor {
   constructor() { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    if(request.url==environment.URL+"public/login" || request.url==environment.URL+"public/signup"){
+      return next.handle(request);
+    }else{
     let authToken = localStorage.getItem("authToken") as string
 
     console.log(authToken);
@@ -25,5 +29,6 @@ export class TokenGenrationInterceptor implements HttpInterceptor {
     
     return next.handle(req);
     // forward with header  
+    }
   }
 }

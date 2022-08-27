@@ -21,7 +21,7 @@ export class SessionService {
     return this.http.post(environment.URL+"public/login",loginCredentials);
   }
 
-  swagger():Observable<any>{
-    return this.http.get(environment.URL+"swagger-ui/index.html")
-  }
+ logoutApi():Observable<any>{
+  return this.http.get(environment.URL+"public/logout")
+ }
 }
