@@ -20,7 +20,7 @@ export class LogoutComponent implements OnInit {
   logout(){
 
     this.sessionService.logoutApi().subscribe(res=>{
-      localStorage.clear
+      localStorage.clear()
       this.toster.success("Logout Successfully")
       this.router.navigateByUrl("/login")
     },err=>{
