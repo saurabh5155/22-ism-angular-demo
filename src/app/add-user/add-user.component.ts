@@ -11,11 +11,11 @@ export class AddUserComponent implements OnInit {
   userForm: FormGroup
   constructor() {
     this.userForm = new FormGroup({
-      firstName: new FormControl('',Validators.required),
-      lastName: new FormControl(''),
-      gender: new FormControl(''),
-      email: new FormControl(''),
-      password: new FormControl('')
+      firstName: new FormControl('',[Validators.required]),
+      lastName: new FormControl('',[Validators.required]),
+      gender: new FormControl('',[Validators.required]),
+      email: new FormControl('',[Validators.required]),
+      password: new FormControl('',[Validators.required])
     })
   }
 
@@ -24,6 +24,7 @@ export class AddUserComponent implements OnInit {
 
   addUser(){
     console.log(this.userForm.value);
+    console.log(this.userForm.valid);
     
   }
 }
