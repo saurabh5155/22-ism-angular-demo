@@ -1,0 +1,23 @@
+<h2 class="upper" align="center">Add Users</h2>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form [formGroup]="userForm">
+            FirstName:<input type="text" class="form-control" fromControlName="firstName" /> 
+            
+            
+            <br>
+            LastName:<input type="text" class="form-control" fromControlName="lastName" /> 
+            
+            <br>
+            Gender:<br>
+            Male:
+            <input type="radio" fromControlName="gender" value="male" /> <br>
+            Female:
+            <input type="radio" value="female" fromControlName="gender" /> <br> <br>
+            Email:<input type="text" class="form-control" fromControlName="email" /> <br>
+            Password:<input type="text" class="form-control" formControlName="password" /> <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

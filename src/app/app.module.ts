@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 // import toster
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +21,8 @@ import {DialogModule} from 'primeng/dialog';
 import { ViewRoleComponent } from './view-role/view-role.component';
 import { UserComponentComponent } from './user-component/user-component.component';
 import { UpdateRoleComponent } from './update-role/update-role.component';
-import { LogoutComponent } from './logout/logout.component';  
+import { LogoutComponent } from './logout/logout.component';
+import { AddUserComponent } from './add-user/add-user.component';  
 
 
 
@@ -39,6 +40,7 @@ import { LogoutComponent } from './logout/logout.component';
     UserComponentComponent,
     UpdateRoleComponent,
     LogoutComponent,
+    AddUserComponent,
   ],
   // declreation for external libreary
   imports: [
@@ -49,6 +51,7 @@ import { LogoutComponent } from './logout/logout.component';
     ToastrModule.forRoot(),
     HttpClientModule,
     DialogModule,
+    ReactiveFormsModule
   ],
   // provide interseptor class 
   providers: [
