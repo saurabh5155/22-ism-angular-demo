@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -11,7 +11,7 @@ export class AddUserComponent implements OnInit {
   userForm: FormGroup
   constructor() {
     this.userForm = new FormGroup({
-      firstName: new FormControl(''),
+      firstName: new FormControl('',Validators.required),
       lastName: new FormControl(''),
       gender: new FormControl(''),
       email: new FormControl(''),
@@ -23,6 +23,7 @@ export class AddUserComponent implements OnInit {
   }
 
   addUser(){
+    console.log(this.userForm.value);
     
   }
 }
